@@ -19,6 +19,8 @@ create table `CURSO` (
  
 insert into `MAESTRO` (`NOMBRES`, `APELLIDOS`,`CORREO`,`TELEFONO`,`DUI`) 
 values('Felix Gerardo','Guevara Palacios','00055419@uca.edu.sv','7898-9899','01010101-2');
+insert into `CURSO` (`DESCRIPCION`, `GRADO`, `SECCION`, `ID_MAESTRO`, `MATERIA`)
+values ('Curso de matematicas', 'Octavo', 'D', 1, 'MATEMATICAS'); 
 
 
 

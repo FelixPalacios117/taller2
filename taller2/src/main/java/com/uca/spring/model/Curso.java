@@ -45,5 +45,12 @@ public class Curso implements Serializable {
 	  String grado;
 	  @Column(name="SECCION",nullable=false)
 	  String seccion;
-	  
+	  @Column(name="ID_MAESTRO", nullable=false, updatable=false, insertable=false)
+	  Integer idMaestro;
+	  @Column(name="MATERIA", nullable=false)
+	  String materia;
+	  @ManyToOne(fetch = FetchType.LAZY)
+	    @JsonIgnore
+	    @JoinColumns({@JoinColumn(name = "ID_MAESTRO", referencedColumnName = "ID_MAESTRO")})
+	    Maestro maestro;
 }
